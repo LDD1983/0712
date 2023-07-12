@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- bs css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">    
+    <style>
+        .h-50px{
+            height: 50px;
+        }
+        .h-300px{
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid mt-5">
+        <!-- row-1///////////////// -->
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100">
+                    btn-1
+                </button>
+                <div class="box h-300px bg-light border border-dark rounded-2">
+
+                </div>
+                
+            </div>
+            <div class="col-3 ">
+                <button type="button" class="btn btn-dark w-100">
+                    btn-2
+                </button>
+                <div class="box h-300px bg-light border border-dark rounded-2">
+
+                </div>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <!-- row-2 ///////////////// -->
+        <div class="row mt-5">
+            <div class="col"></div>
+            <div class="col">
+                <button type="button" class="btn btn-dark w-100">
+                    btn-3
+                </button>
+                <div class="box h-300px bg-light border border-dark rounded-2">
+
+                </div>
+                
+            </div>
+           
+            <div class="col ">
+                <button type="button" class="btn btn-dark w-100">
+                    btn-4
+                </button>
+                <div class="box h-300px bg-light border border-dark rounded-2">
+
+                </div>
+
+            </div>
+            <div class="col"></div>
+        </div>
+        <!-- row-3        /////////////////// -->
+        <div class="row mt-5">
+            <div class="col"></div>
+            <div class="col">
+                <button type="button" class="btn btn-dark w-100">
+                    btn-3
+                </button>
+                <div class="box  bg-light border border-dark rounded-2">
+
+                </div>
+                
+            </div>
+           
+            <div class="col ">
+                <button type="button" class="btn btn-dark w-100">
+                    btn-4
+                </button>
+                <div class="box bg-light border border-dark rounded-2">
+
+                </div>
+
+            </div>
+            <div class="col"></div>
+        </div>
+     
+        
+    </div>
+
+
+
+    <!-- bs-js src -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <!-- jq src -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <!-- jq start -->
+    <script>
+        $(document).ready(function () {
+            const btn = $('.btn');
+            const box = $('.box');
+            box.height("30vh")
+
+            console.log('btn',btn);
+            console.log('box',box);
+
+            btn.click(
+                function(){
+                    // let parentCol = $(this).parent();
+                    // let bottomBox = parentCol.find(".box");
+                    // bottomBox.slideToggle();
+
+                    let siblingBox = $(this).siblings();
+
+                    siblingBox.slideToggle();
+
+                }                                
+            )
+
+
+
+        });
+    </script>
+    <!-- jq end -->
+</body>
+
+</html>

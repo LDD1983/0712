@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_event</title>
+    <!-- bs css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary w-100" id="hideBtn">
+                    hide
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary w-100" id="showBtn">
+                    show
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-danger w-100" id="fadeinBtn">
+                    fadeinBtn
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger w-100" id="fadeoutBtn">
+                    fadeuot
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container  mt-5 ">
+        <div class="row">
+            <div class="col vh-100">
+                <div class="box w-100 h-50 bg-dark rounded-5 text-center display-3 pt-5 font-monospace text-light">
+                    box h1 font-monospace
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- bs-js src -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <!-- jq src -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <!-- jq start -->
+    <script>
+        $(document).ready(function () {
+            const hideBtn = $('#hideBtn');
+            const showBtn = $('#showBtn');
+            const fadeinBtn = $('#fadeinBtn');
+            const fadeoutBtn = $('#fadeoutBtn');
+            const box = $('.box');
+
+            console.log('hideBtn', hideBtn);
+            console.log('showBtn', showBtn);
+            console.log('box', box);
+            console.log('bofadeinBtnx', fadeinBtn);
+            console.log('fadeoutBtn', fadeoutBtn);
+
+            hideBtn.click(function () {
+                box.hide();
+            })
+            showBtn.click(function () {
+                box.show();
+            })
+            fadeinBtn.click(
+                function(){
+                    box.fadeIn(2000)
+                }
+            )
+            fadeoutBtn.click(
+                function(){
+                    box.fadeOut(2000)
+                }
+            )   
+
+
+
+
+        });
+    </script>
+    <!-- jq end -->
+</body>
+
+</html>
